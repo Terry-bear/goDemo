@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 func main() {
+	// map key-->[] value-->
 	m := map[string]string{
 		"name":    "ccmouse",
 		"course":  "golang",
@@ -12,12 +13,13 @@ func main() {
 
 	m2 := make(map[string]int) // m2 == empty map
 
-	var m3 map[string]int // m3 == nil
+	var m3 map[string]int // m3 == nil golang的nil可以参与运算
 
 	fmt.Println("m, m2, m3:")
 	fmt.Println(m, m2, m3)
 
 	fmt.Println("Traversing map m")
+	// map是无序
 	for k, v := range m {
 		fmt.Println(k, v)
 	}
