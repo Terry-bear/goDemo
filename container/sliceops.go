@@ -9,7 +9,7 @@ func printSlice(s []int) {
 
 func sliceOps() {
 	fmt.Println("Creating slice")
-	var s []int // Zero value for slice is nil
+	var s []int // Zero value for slice is nil s == nil
 
 	for i := 0; i < 100; i++ {
 		printSlice(s)
@@ -30,6 +30,8 @@ func sliceOps() {
 	printSlice(s2)
 
 	fmt.Println("Deleting elements from slice")
+	// golang不提供slice的删除某一元素的API,可以用append函数间接实现
+	// append第二位不支持直接放切片可以加...来实现
 	s2 = append(s2[:3], s2[4:]...)
 	printSlice(s2)
 
