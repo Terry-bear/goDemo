@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	q := queue.Queue{1}
+	q := queue.Queue{2}
 	fmt.Println(q)
 	q.Push(2)
 	q.Push(3)
